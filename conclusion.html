@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخاتمة</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Cairo:wght@700&family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+box-sizing: border-box;
+
+}
+
+*::selection
+  {
+    color: rgb(177, 169, 169);
+}
+
+html {
+scroll-behavior: smooth;
+
+}
+
+body {
+padding: 0%;
+margin:0%;
+font-family: 'Amiri', serif;
+font-family: 'Cairo', sans-serif;
+font-family: 'Lemonada', cursive;
+background-image: linear-gradient(
+rgba(90, 89, 89, 0.8),
+rgba(16, 16, 16, 0.8) ),
+ url(https://leverageedu.com/blog/wp-content/uploads/2020/03/Marketing-Management.jpg);
+ background-size:cover;
+}
+
+.logo {
+padding: 10px;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: rgb(255, 255, 255);
+z-index: 1000;
+position: sticky;
+top: 0; 
+}
+.logo 
+{
+cursor: pointer;
+}
+
+.navbar-links ul{
+margin: 0%;
+padding:0%;
+display: flex;
+}
+.navbar-links li {
+list-style: none;
+transition:background-color 300ms ease-in, color 500ms linear;
+}
+
+.navbar-links li a {
+text-decoration: none;
+color: rgb(255, 255, 255);
+padding:1rem;
+display: block;
+}
+
+.navbar-links li a:hover 
+{
+color: rgb(214, 211, 211);
+
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem ;
+right: 1rem;
+display: none;
+flex-direction:column ;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+
+
+@media (max-width:1024px) 
+{
+.toggle-button {
+display :flex;
+ }
+.navbar-links{
+display: none; 
+width: 100%;
+}
+.navbar{
+ flex-direction: column;
+ align-items: flex-start;
+}
+.navbar-links ul {
+ width: 100%;
+ flex-direction: column;
+
+}
+.navbar-links li {
+ 
+ text-align: center;
+}
+.navbar-links a {
+ padding: .5rem 1 rem;
+}
+.navbar-links.active
+{
+ display: flex;
+ 
+}
+}
+
+
+.article {
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  h1, p {
+    line-height: 1.8;
+    font-family: 'Lemonada', cursive;
+  }
+  
+  .article h1 {
+    font-weight: 900;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+
+  .glowIn {
+    font-weight: 400;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(177, 169, 169);
+  }
+  
+    span {
+      animation: glow-in .5s both;
+    }
+  
+
+
+@keyframes glow-in {
+  from { opacity: 0; }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 20px white;
+  }
+  75% {
+    opacity: 1;
+  }
+  to { opacity: 0.7; }
+}
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">
+الخاتمة   
+ </div>
+
+
+<a href="#" class="toggle-button">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+
+</a>
+
+<div class="navbar-links">
+<ul>
+  
+<li><a href="references.html">المراجع</a></li>
+<li><a href="conclusion.html">الخاتمة</a></li>
+<li><a href="corps.html">العرض</a></li>
+<li><a href="introduction.html">المقدمة</a></li>
+
+</ul>
+</div>
+</nav>
+
+<div class="article">
+  <h1 class="glowIn">
+    الخاتمة
+  </h1>
+  <p class="glowIn">
+   
+    ناقشنا في هذا البحث مفهوم سياسة المنتج كعنصر اساسي من     
+    التسويق  
+    ودور فعال لدى أي مؤسسة
+    حيث تبني المؤسسة لسياسات سليمة وصحيحة يؤدي بها إلى تحسين أدائها  والعكس صحيح 
+    حيث  تساعد السياسات التسويقية  على زيادة أو على الأقل الحفاظ على الحصة السوقية الحالية 
+
+  </p>
+</div>
+
+
+
+<script type="text/javascript">
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+
+navbarLinks.classList.toggle('active')
+
+})
+
+
+
+
+
+let glowInTexts = document.querySelectorAll(".glowIn");
+
+
+glowInTexts.forEach(glowInText => {
+  let letters = glowInText.textContent.split("");
+  glowInText.textContent = "";
+  letters.forEach((letter, i) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.style.animationDelay = `${i * 0.02}s`;
+    glowInText.append(span);
+  });
+});
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

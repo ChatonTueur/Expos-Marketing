@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Cairo:wght@700&family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+box-sizing: border-box;
+
+}
+*::selection{
+    color: rgb(177, 169, 169);
+}
+html {
+scroll-behavior: smooth;
+
+}
+
+body {
+font-family: 'Amiri', serif;
+font-family: 'Cairo', sans-serif;
+font-family: 'Lemonada', cursive;
+margin: 0%;
+padding: 0%;
+background-color: rgb(218, 216, 216);
+}
+
+.logo {
+padding: 10px;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: rgb(255, 255, 255);
+z-index: 1000;
+position: sticky;
+top: 0; 
+}
+.logo 
+{
+cursor: pointer;
+}
+
+.navbar-links ul{
+margin: 0%;
+padding:0%;
+display: flex;
+}
+.navbar-links li {
+list-style: none;
+transition:background-color 300ms ease-in, color 500ms linear;
+}
+
+.navbar-links li a {
+text-decoration: none;
+color: rgb(255, 255, 255);
+padding:1rem;
+display: block;
+}
+.navbar-links li a:hover 
+{
+color: rgb(214, 211, 211);
+
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem ;
+right: 1rem;
+display: none;
+flex-direction:column ;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+
+
+@media (max-width:1024px) 
+{
+.toggle-button {
+display :flex;
+ }
+.navbar-links{
+display: none; 
+width: 100%;
+}
+.navbar{
+ flex-direction: column;
+ align-items: flex-start;
+}
+.navbar-links ul {
+ width: 100%;
+ flex-direction: column;
+
+}
+.navbar-links li {
+ 
+ text-align: center;
+}
+.navbar-links a {
+ padding: .5rem 1 rem;
+}
+.navbar-links.active
+{
+ display: flex;
+ 
+}
+}
+
+
+.container{ 
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+
+
+.background-img{
+background-image: url("https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/marketing-mix-4p/marketing-mix-4p.jpg");
+height: 400px;
+width: 400px;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 5% auto;
+padding:20px;
+border: 1px solid #6a6a6b;
+border-radius: 4px;
+box-shadow: 0px 0px 5px #27282e;
+position: relative;
+}
+
+.content h2{ font-size:19px;}
+
+.box{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 300px;
+height: 300px;
+background: #111845a6;
+box-sizing: border-box;
+overflow: hidden;
+box-shadow: 0 20px 50px rgb(249, 249, 251);
+border: 2px solid #993427;
+color: white;
+padding: 20px;
+}
+
+.box:before{
+content: '';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background: rgba(255,255,255,0.1);
+transition:0.5s;
+pointer-events: none;
+}
+
+.box:hover:before{
+left:-50%;
+transform: skewX(-5deg);
+}
+
+
+.box .content{
+position:absolute;
+top:15px;
+left:15px;
+right:15px;
+bottom:15px;
+border:1px solid #f0a591;
+padding:20px;
+text-align:center;
+box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+
+}
+
+.box span{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: block;
+box-sizing: border-box;
+
+}
+
+.box span:nth-child(1)
+{
+transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+transform:rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+transform:rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+transform:rotate(270deg);
+}
+
+.box span:before
+{
+content: '';
+position: absolute;
+width:100%;
+height: 2px;
+background: #f1964c;
+animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+0% {
+transform:scaleX(0);
+transform-origin: left;
+}
+50%
+{
+transform:scaleX(1);
+transform-origin: left;
+}
+50.1%
+{
+transform:scaleX(1);
+transform-origin: right;
+
+}
+
+100%
+{
+transform:scaleX(0);
+transform-origin: right;
+
+}
+
+
+} 
+
+
+footer 
+{
+position: relative;
+width: 100%;
+height: auto;
+padding: 50px 100px;
+background: rgb(27, 27, 27);
+
+}
+
+footer h2 {
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+footer h2:hover
+{
+    color: rgb(199, 194, 194);
+}
+

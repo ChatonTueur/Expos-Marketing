@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>المراجع</title>
+ <style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Cairo:wght@700&family=Lemonada&display=swap');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  
+  *{
+  box-sizing: border-box;
+  
+  }
+  
+  *::selection
+  {
+    color: rgb(177, 169, 169);
+}
+  html {
+  scroll-behavior: smooth;
+  
+  }
+  
+  body {
+  font-family: 'Amiri', serif;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Lemonada', cursive;
+  background-color: rgb(218, 216, 216);
+  background-image: url('http://www.pngplay.com/wp-content/uploads/3/Livre-PNG-Fond-Image.png');
+  background-size: cover;
+  margin: 0%;
+  padding: 0%;
+  }
+  
+  .logo {
+padding: 10px;
+  }
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  z-index: 1000;
+  position: sticky;
+  top: 0; 
+  }
+  .logo 
+  {
+  cursor: pointer;
+  }
+  
+  .navbar-links ul{
+  margin: 0%;
+  padding:0%;
+  display: flex;
+  }
+  .navbar-links li {
+  list-style: none;
+  transition:background-color 300ms ease-in, color 500ms linear;
+  }
+  
+  .navbar-links li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding:1rem;
+  display: block;
+  }
+  .navbar-links li a:hover 
+{
+color: rgb(214, 211, 211);
+
+}
+  
+  .toggle-button {
+  position: absolute;
+  top: .75rem ;
+  right: 1rem;
+  display: none;
+  flex-direction:column ;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  }
+  
+  .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  }
+  
+  
+  @media (max-width:1024px) 
+  {
+  .toggle-button {
+  display :flex;
+}
+  .navbar-links{
+  display: none; 
+  width: 100%;
+  }
+  .navbar{
+flex-direction: column;
+align-items: flex-start;
+  }
+  .navbar-links ul {
+width: 100%;
+flex-direction: column;
+  
+  }
+  .navbar-links li {
+
+text-align: center;
+  }
+  .navbar-links a {
+padding: .5rem 1 rem;
+  }
+  .navbar-links.active
+  {
+display: flex;
+
+  }
+
+  }
+.videos {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sites {
+  padding-top:4% ;
+  margin-right: 50%;
+  display: flex;
+  justify-content:center;
+
+}
+
+
+.sites li 
+{
+  
+  color: #555;
+}
+
+.sites li a {
+  color: rgb(7, 6, 6);
+  text-decoration: none;
+}
+
+.sites li a:hover {
+  color: #555;
+}
+
+
+
+  
+</style>
+</head>
+
+<body>
+ <nav class="navbar">
+  <div class="logo">
+المراجع 
+</div>
+  
+  
+<a href="#" class="toggle-button">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+
+</a>
+  
+  <div class="navbar-links">
+  <ul>
+  
+  
+<li><a href="references.html">المراجع</a></li>
+<li><a href="conclusion.html">الخاتمة</a></li>
+<li><a href="corps.html">العرض</a></li>
+<li><a href="introduction.html">المقدمة</a></li>
+  
+  </ul>
+  </div>
+  </nav>
+  
+
+<main>
+<section>
+
+<div class="videos">
+<td><iframe width="300" height="200" src="https://www.youtube.com/embed/7SSu0KtXI2c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+<td><iframe width="300" height="200" src="https://www.youtube.com/embed/IFYOw0WQRHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</div>    
+
+<div class="sites">
+
+<ul>
+
+<li><a href="https://fr.wikipedia.org/wiki/Politique_de_produit">La Politique de produit (lien wikipédia)</a></li>
+<li><a href="http://www.logistiqueconseil.org/">site : Logistique conseil</a></li>
+<li><a href="https://www.expertinbox.com/">site : expertinbox </a></li>
+<li><a href="https://u-b-h.com/wp-content/uploads/2014/09/12803136476Mix_Produit.pdf">fichier pdf</a></li>
+<li><a href="https://sotor.com/">site : El Sotor</a></li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+
+navbarLinks.classList.toggle('active')
+
+})
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

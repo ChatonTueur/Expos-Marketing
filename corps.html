@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+<title>العرض</title>
+<!-----------------------------------------CSS----------------------------------------------->
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Cairo:wght@700&family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+box-sizing: border-box;
+
+}
+
+*::selection
+  {
+    color: rgb(177, 169, 169);
+}
+
+html {
+scroll-behavior: smooth;
+
+}
+
+body {
+font-family: 'Amiri', serif;
+font-family: 'Cairo', sans-serif;
+
+background-color: rgba(172, 165, 165, 0.294);
+margin: 0%;
+padding: 0%;
+}
+
+.logo {
+padding: 10px;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: 'Lemonada', cursive;
+background-color: #333;
+color: rgb(255, 255, 255);
+z-index: 1000;
+position: sticky;
+top: 0; 
+}
+.logo 
+{
+cursor: pointer;
+}
+
+.navbar-links ul{
+margin: 0%;
+padding:0%;
+display: flex;
+}
+.navbar-links li {
+list-style: none;
+transition:background-color 300ms ease-in, color 500ms linear;
+}
+
+.navbar-links li a {
+text-decoration: none;
+color: rgb(255, 255, 255);
+padding:1rem;
+display: block;
+}
+.navbar-links li a:hover 
+{
+color: rgb(214, 211, 211);
+
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem ;
+right: 1rem;
+display: none;
+flex-direction:column ;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+
+
+@media (max-width:1024px) 
+{
+.toggle-button {
+display :flex;
+ }
+.navbar-links{
+display: none; 
+width: 100%;
+}
+.navbar{
+ flex-direction: column;
+ align-items: flex-start;
+}
+.navbar-links ul {
+ width: 100%;
+ flex-direction: column;
+
+}
+.navbar-links li {
+ 
+ text-align: center;
+}
+.navbar-links a {
+ padding: .5rem 1 rem;
+}
+.navbar-links.active
+{
+ display: flex;
+ 
+}
+}
+
+
+.tvs{
+  
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  
+}
+
+#tv {
+ 
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+#tv:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+
+}
+
+#tv h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+
+#tv p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+#tv p .img1 {
+  margin-right:110px;
+  margin-top: 50px;
+}
+
+#tv1
+{
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv1:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+#tv1 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+
+#tv1 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+
+#tv2
+{
+
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv2:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv2 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv2 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+#tv3
+{
+  margin-top: 110px;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv3:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv3 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv3 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+#tv4
+{
+  margin-top: 110px;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv4:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv4 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv4 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+
+#tv5
+{
+  margin-top: 110px;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv5:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv5 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv5 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+#tv6
+{
+  padding-top:1px ;
+  margin-top: 320px;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv6:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv6 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv6 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+#tv7
+{
+
+  margin-top: 100px;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+
+#tv7:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  background-color: rgb(245, 240, 240);
+}
+
+
+#tv7 h3 {
+color:#555;
+text-align: center;
+text-decoration: underline;
+  
+}
+
+#tv7 p {
+  padding: 10px;
+  text-align: right;
+  color: rgb(61, 61, 61);
+  
+}
+
+
+
+
+</style>
+</head>
+<!-------------------------------------------HTML-------------------------------------------->
+
+<body>
+
+<nav class="navbar">
+<div class="logo">
+العرض
+</div>
+
+
+<a href="#" class="toggle-button">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+
+</a>
+
+<div class="navbar-links">
+<ul>
+   
+<li><a href="references.html">المراجع</a></li>
+<li><a href="conclusion.html">الخاتمة</a></li>
+<li><a href="corps.html">العرض</a></li>
+<li><a href="introduction.html">المقدمة</a></li>
+
+</ul>
+</div>
+</nav>
+
+<div class="tvs">
+
+<div id="tv">
+
+<p>
+
+  إسم العلامة : هو جزء الذي يمكن نطقه مثل 
+
+<br>
+    <img src="http://assets.stickpng.com/thumbs/58737bd3f3a71010b5e8ef37.png" width="100px" height="100px">
+    <img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c533.png" width="100px" height="100px">
+    <img src="http://assets.stickpng.com/thumbs/5848242ecef1014c0b5e49c8.png" width="100px" height="100px">
+
+</p>
+
+<p>
+
+  حقوق النشر: هو الحق القانوني للحصرية في إستخدام أو بيع أو إعادة إنتاج محتوى خاص بالشركة 
+  
+
+
+  <br><img class="img1" src="http://pngimg.com/uploads/copyright/copyright_PNG59.png" width="100px" height="100px">
+
+
+</p>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="tv1">
+
+<h3>ما هم عناصر سياسة المنتج ؟</h3>
+
+<p>
+  <b>
+العلامة التجارية :  </b>
+
+انها علامة تعمل على تمييز منتج على المنتجات الأخرى في السوق ، نميز من بينهم</p>
+ 
+  <p>
+    
+    
+   العلامة التصويرية :هو الجزء الذي يمكن التعرف عليه بسهولة عن طريق النظرة مثل 
+    
+   <br><img src="https://i.pinimg.com/originals/be/43/91/be43913dda7dbc2e3a03abec73ea42e1.png" width="110px" height="110">
+        <img src="https://img2.pngio.com/polo-ralph-lauren-logo-logok-logo-de-ralph-lauren-transparent-ralph-lauren-logo-wallpaper-png-920_1287.png" width="130px" height="120px">
+        <img src="https://www.chateauxdeslangues.com/wp-content/uploads/2017/12/Louis-vuitton.png" width="79px" height="80">
+  
+  </p>
+
+
+</div>
+
+
+
+<div id="tv2">
+
+
+  <h3 >ما هدف هذه السياسة ؟</h3>
+
+  <p> 
+  
+    تقوم سياسة المنتج بتحديد خصائص المنتج بطريقة تجعله قادرا
+    على منافسة قدر الإمكان و تقديم منتج يستجيب بدقة لطلب السوق ، أيضا تمنح فرصة الإتخاذ العديد من القرارات الإستراتيجية المتعلقة بالإبتكار ، التغليف ، العلامة التجارية إلخ
+  </p>
+  
+  
+  <h3>كيف تحدد سياسة المنتج ؟</h3>
+  
+  <p>
+   هي تحدد حسب نوع و وظيفة المؤسسة
+  </p>
+  <p style="text-align: left;">
+   "en fonction des particularités de l'entreprise"
+  </p>
+
+
+</div>
+
+<div id="tv3">
+
+<h3>ما هي مراحل دورة حياة المنتج ؟ </h3>
+
+<p>تُعرف دورة حياة المُنتج  على أنها الفترة الزمنية التي يتم خلالها تقديم المُنتجات للمُستهلكين حتى يتوقف العمل على تقديم هذه المُنتجات، بحيث تمُر هذه المُنتجات بأربعة مراحل خلال دورة حياتها وهي</p>
+
+<p>
+<b>عرض المنتج</b>
+تُعد مرحلة عرض المُنتج  المرحلة الأولى من دورة حياة المُنتج، فالمُنتج في هذه المرحلة يكون في حالة التقديم وعادةً ما تكون مبيعاته مُنخفضة وتنمو بطريقةٍ بطيئةٍ
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+<div id="tv4">
+
+
+<h3>التغليف</h3>
+
+<p>:يجب علينا أن نفرق بين</p>
+
+<p>
+<b>:L'Emballage</b>
+<br>يحمي المنتج للنقل و التخزين مثل العلب، البرميل
+</p>
+
+<p>
+<b> :Le Conditionnement </b>
+<br>يكون على إتصال مباشر بالمنتج لحماية المحتوى من أجل الحفاظ على الجودة
+</p>
+
+<p>
+<b>:Le Packaging</b>
+<br>هو أقل اهتمام بحماية المحتوى و أكثر إهتماما بالمظهر الخارجي 
+</p>
+
+
+
+
+
+
+
+
+
+ 
+</div>
+
+
+<div id="tv5">
+  <h3>ما هم وظائف العلامة التجارية ؟</h3>
+
+
+<p>
+    :تحقق العلامة التجارية 3 وظائف رئيسية <br>
+   
+
+<br>
+<b>تحديد الهوية </b>
+ :يسمح للزبون على العثور بسهولة على المنتج المراد 
+
+ <br>
+  <b>الأمان </b>
+  :تطمئن الزبون وتعطيه أمل في جودة معينة
+ 
+  <br>
+
+  <b> الترويج </b>
+   :إن وجود ها على المنتج يضيف قيمة لهذا المنتج في نظرالزبون
+
+</p>
+
+
+
+
+<div id="tv6">
+  <p>
+ <b> تطور المنتج
+ </b>
+  تُعرف المرحلة الثانية من مراحل دورة حياة المُنتج باسم تطور المُنتج أو مرحلة النُمو وهي المرحلة التي تزيد فيه إيرادات المبيعات بشكلٍ يُغطي كافة التكاليف
+</p>
+
+<p>
+<br> <b> نضج المنتج
+</b>
+  هي المرحلة الثالثة التي تتعرض لها الشركات نتيجةً للمنافسة، 
+  وعادةً ما تقوم الشركات فيها بتخفيض الأسعار وزيادة الحملات التسويقية
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<div id="tv7">
+
+  <p>
+    <b>رفض المنتج
+    </b>
+    المرحلة الأخيرة في دورة حياة المُنتج هي مرحلة الانحدار أو مرحلة التراجع وتعدُّ هذه المرحلة مرحلة موت المنتج؛ إذ يتم فيها رفض المُنتج،
+حيث تتعرض الشركات في هذه المرحلة إلى انخفاض في المبيعات  
+   </p>
+
+  
+  <p>
+    <a href="https://www.leblogdudirigeant.com/wp-content/uploads/2020/01/cycle_vie-1.png"><img src="https://www.expertinbox.com/wp-content/uploads/2013/07/cycle-de-vie.jpg" width="330px" height="270px"></a>
+    </p>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--------------------------------------------JAVASCRIPT------------------------------------------->
+<script type="text/javascript">
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+
+navbarLinks.classList.toggle('active')
+
+})
+
+
+    
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
